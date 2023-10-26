@@ -8,7 +8,8 @@ func _process(delta):
 		pauseMenu()
 	if Input.is_action_just_pressed("Reset"):
 		get_tree().reload_current_scene()
-		paused = true
+		paused = false
+		Engine.time_scale = 1
 
 func pauseMenu():
 	if !paused:

@@ -42,6 +42,7 @@ size_flags_vertical = 4
 alignment = 1
 
 [node name="TimeText" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("3_2thjs")
 text = "You completed Level 1 in:"
@@ -49,9 +50,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("4_bnhbw")
 alignment = 1
@@ -74,7 +77,19 @@ text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label5" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ThankYou" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_2thjs")
+text = "Thanks for playing!"
+horizontal_alignment = 1
+
 [node name="Spacer" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Continue" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
