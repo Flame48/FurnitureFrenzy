@@ -101,12 +101,14 @@ layout_mode = 2
 alignment = 1
 
 [node name="Continue" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("5_hog8o")
 text = "Continue"
 
 [node name="Label2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Replay" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]

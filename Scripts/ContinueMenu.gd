@@ -4,8 +4,8 @@ extends Control
 @onready var minutes = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/minutes
 @onready var seconds = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/seconds
 @onready var levelLabel = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/TimeText
-@onready var continueSpacer = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Label2
-@onready var continueButton = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Continue
+@onready var continueSpacer = %Label2
+@onready var continueButton = %Continue
 @onready var timeLabel = %TimeText
 @onready var timeLabelSpacer = %Label3
 @onready var timeBox = %HBoxContainer
