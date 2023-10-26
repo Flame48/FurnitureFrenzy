@@ -9,10 +9,8 @@ var prevY = position.y
 @onready var winTwo = get_tree().get_root().get_node("TestLevel/Furniture/WinTwo")
 
 var time = 0
-var winOnce = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	winOnce = 0
 	Global.playWinSound = false
 	$RayCast2D.target_position = Vector2.DOWN*16
 	ResourceLoader.load_threaded_request("res://Scenes/Menus/ContinueMenu.tscn")

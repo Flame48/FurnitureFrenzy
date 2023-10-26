@@ -7,7 +7,6 @@ extends Control
 @onready var continueSpacer = %Label2
 @onready var continueButton = %Continue
 @onready var timeLabel = %TimeText
-@onready var timeLabelSpacer = %Label3
 @onready var timeBox = %HBoxContainer
 @onready var timeBoxSpacer = %Spacer
 @onready var thankYou = %ThankYou
@@ -28,7 +27,6 @@ func _ready():
 	levelLabel.text = "You completed Level " + str(Global.currentLevel) + " in:"
 	if Global.currentLevel == 0:
 		timeLabel.visible = false
-		timeLabelSpacer.visible = false
 		timeBox.visible = false
 		timeBoxSpacer.visible = false
 	if Global.currentLevel == 5: #Last Level

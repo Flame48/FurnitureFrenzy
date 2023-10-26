@@ -68,6 +68,7 @@ layout_mode = 2
 
 [node name="Instructions" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme = ExtResource("4_wcy5u")
 text = "Controls"
 

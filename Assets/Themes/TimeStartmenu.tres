@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dqoq0tqvny12e"]
+
+[ext_resource type="FontFile" uid="uid://cgp4cr8gyr76i" path="res://Assets/PixelColeco-4vJW.ttf" id="1_w6t0y"]
+
+[sub_resource type="FontVariation" id="FontVariation_3gdnc"]
+base_font = ExtResource("1_w6t0y")
+variation_embolden = 0.1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehdsa"]
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+region_rect = Rect2(176, 224, 32, 128)
+
+[resource]
+HBoxContainer/constants/separation = 4
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 26
+Label/fonts/font = SubResource("FontVariation_3gdnc")
+Label/styles/normal = SubResource("StyleBoxTexture_ehdsa")

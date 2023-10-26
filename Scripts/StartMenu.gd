@@ -1,6 +1,7 @@
 extends Control
 
 @onready var buttonClick = $ButtonClick
+
 func _ready():
 	Global.playWinSound = false
 	Global.currentLevel = 0
@@ -8,6 +9,7 @@ func _ready():
 	Global.playLevelMusic = false
 	Global.playMenuMusic = true
 func _on_play_pressed():
+	Engine.time_scale = 1
 	buttonClick.play()
 	await buttonClick.finished
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level0.tscn")
@@ -20,4 +22,6 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_instructions_pressed():
+	buttonClick.play()
+	await buttonClick.finished
 	get_tree().change_scene_to_file("res://Scenes/Menus/ControlsPage.tscn")
