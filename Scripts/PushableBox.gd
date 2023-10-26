@@ -5,12 +5,15 @@ var targetY = position.y
 var prevX = position.x
 var prevY = position.y
 @onready var tile_map = get_tree().get_root().get_node("TestLevel/Floor")
+@onready var winOne = get_tree().get_root().get_node("TestLevel/Furniture/WinOne")
+@onready var winTwo = get_tree().get_root().get_node("TestLevel/Furniture/WinTwo")
 
 var time = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$RayCast2D.target_position = Vector2.DOWN*16
 	ResourceLoader.load_threaded_request("res://Scenes/Menus/ContinueMenu.tscn")
+	
 func _process(delta):
 	time += delta
 func checkDirection(direction: Vector2):
@@ -60,8 +63,6 @@ func updateInterpolation(inputCooldown, inputTime):
 	position.y = lerp(prevY, targetY, lerpWeight)
 	
 
-@onready var winOne = get_tree().get_root().get_node("TestLevel/Furniture/WinOne")
-@onready var winTwo = get_tree().get_root().get_node("TestLevel/Furniture/WinTwo")
 
 var nearbyBoxes = [] # To store nearby boxes
 	
