@@ -13,11 +13,13 @@ extends Control
 @onready var thankYou = %ThankYou
 @onready var thankYouSpacer = %Label5
 @onready var buttonClick = $ButtonClick
+@onready var winTimer = $Wintimer
 
 var msecTime = 0
 var minutesTime = 0
 var secondsTime = 0
 func _ready():
+	winTimer.start()
 	thankYou.visible = false
 	thankYouSpacer.visible = false
 	msecTime = fmod(Global.levelTime, 1) * 100
@@ -63,3 +65,6 @@ func _on_replay_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
 	Global.playLevelMusic = true
 	Global.playMenuMusic = false
+
+func _on_wintimer_timeout():
+	Global.playWinSound = false

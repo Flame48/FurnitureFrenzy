@@ -2,6 +2,7 @@ extends Control
 
 @onready var buttonClick = $ButtonClick
 func _ready():
+	Global.playWinSound = false
 	Global.currentLevel = 0
 	Global.levelTime = 0
 	Global.playLevelMusic = false

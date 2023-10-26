@@ -5,3 +5,4 @@ var levelTime = 0
 
 var playMenuMusic = true
 var playLevelMusic = false
+var playWinSound = false

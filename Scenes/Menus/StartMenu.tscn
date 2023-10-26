@@ -42,7 +42,7 @@ layout_mode = 2
 [node name="GameTitle" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("3_840rw")
-text = "Furniture Frenzy"
+text = "Maneuver Mansion"
 horizontal_alignment = 1
 vertical_alignment = 1
 
