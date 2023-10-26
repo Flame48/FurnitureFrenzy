@@ -7,6 +7,8 @@ func _on_resume_pressed():
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menus/StartMenu.tscn")
+	Global.playLevelMusic = false
+	Global.playMenuMusic = true
 
 func _on_quit_pressed():
 	get_tree().quit()

@@ -40,11 +40,17 @@ func _ready():
 func _on_continue_pressed():
 	Global.currentLevel += 1
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
+	Global.playLevelMusic = true
+	Global.playMenuMusic = false
 func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menus/StartMenu.tscn")
+	Global.playLevelMusic = false
+	Global.playMenuMusic = true
 
 func _on_replay_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
+	Global.playLevelMusic = true
+	Global.playMenuMusic = false

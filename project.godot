@@ -18,7 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scripts/global.gd"
-Music="*res://Scenes/Music.tscn"
+MenuMusic="res://Scenes/MenuMusic.tscn"
+LevelMusic="res://Scenes/LevelMusic.tscn"
 
 [display]
 

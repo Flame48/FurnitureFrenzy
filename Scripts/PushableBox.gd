@@ -70,6 +70,8 @@ func checkIfBoxesAreNear():
 	if winOne.nearbyBoxes.has(winTwo) and isAdjacent():
 		Global.levelTime = time
 		get_tree().change_scene_to_file("res://Scenes/Menus/ContinueMenu.tscn")
+		Global.playLevelMusic = false
+		Global.playMenuMusic = true
 	else:
 		return
 

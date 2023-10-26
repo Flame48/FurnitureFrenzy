@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://eh8m05d24hyk"]
+
+[ext_resource type="AudioStream" uid="uid://3s8kfyn54pob" path="res://Assets/Music/MenuMusic.mp3" id="1_qcxh3"]
+[ext_resource type="Script" path="res://Scripts/MenuMusic.gd" id="2_2rh1t"]
+
+[node name="MenuMusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_qcxh3")
+volume_db = -1.0
+autoplay = true
+script = ExtResource("2_2rh1t")
