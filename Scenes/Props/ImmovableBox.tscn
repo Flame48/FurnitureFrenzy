@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2b22hqidx1wx"]
+
+[ext_resource type="Script" path="res://Scripts/ImmovableBox.gd" id="1_bbbah"]
+
+[node name="ImmovableBlock" type="RayCast2D"]
+collide_with_areas = true
+script = ExtResource("1_bbbah")

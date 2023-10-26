@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://fxrtm7l3q775"]
+
+[ext_resource type="Script" path="res://Scripts/ContinueMenu.gd" id="1_h7q6t"]
+[ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_npd3e"]
+[ext_resource type="Theme" uid="uid://bjvwupkf1kq0e" path="res://Assets/Themes/Label.tres" id="3_2thjs"]
+[ext_resource type="Theme" uid="uid://cqi0qinw5f5bv" path="res://Assets/Themes/Time.tres" id="4_bnhbw"]
+[ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="5_hog8o"]
+
+[node name="ContinueMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7q6t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Background" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-6.10352e-05, -4.50611e-05)
+scale = Vector2(13.3333, 7.5)
+texture = ExtResource("2_npd3e")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
+
+[node name="MarginContainer" type="MarginContainer" parent="Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TimeText" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_2thjs")
+text = "You completed Level 1 in:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_bnhbw")
+alignment = 1
+
+[node name="minutes" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "00:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="seconds" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "00."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="msec" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_hog8o")
+text = "Continue"
+
+[node name="Label2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Replay" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_hog8o")
+text = "Replay"
+
+[node name="Label4" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MainMenu" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_hog8o")
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_hog8o")
+text = "Quit"
+
+[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
