@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dboy4s0k6kyns"]
 
+[ext_resource type="Texture2D" uid="uid://2t7ch8vhun2n" path="res://Assets/4_BigSet_Character.png" id="1_2pjyx"]
 [ext_resource type="Script" path="res://Scripts/PushableBox.gd" id="1_85cjr"]
-[ext_resource type="Texture2D" uid="uid://b1jgnogr22g8q" path="res://Assets/4_BigSet2-noBackground.png" id="1_t6k1b"]
 
 [node name="PushableFurniture" type="Sprite2D"]
-texture = ExtResource("1_t6k1b")
+texture = ExtResource("1_2pjyx")
 region_enabled = true
 region_rect = Rect2(48, 368, 16, 16)
 script = ExtResource("1_85cjr")
