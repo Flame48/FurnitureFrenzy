@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdxq26tpltwjn"]
+
+[ext_resource type="Script" path="res://Scripts/ControlPage.gd" id="1_hhme6"]
+[ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_082i2"]
+[ext_resource type="Theme" uid="uid://dtfyaf1ivc1ip" path="res://Assets/Themes/ControlPageLabel.tres" id="3_w6wbg"]
+[ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="5_ff56e"]
+
+[node name="ControlPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hhme6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Background" type="Sprite2D" parent="Camera2D"]
+position = Vector2(6.10352e-05, 0)
+scale = Vector2(13.3333, 7.5)
+texture = ExtResource("2_082i2")
+region_enabled = true
+region_rect = Rect2(384, 0, 96, 96)
+
+[node name="MarginContainer" type="MarginContainer" parent="Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Control1" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_w6wbg")
+text = "Use WASD or arrow keys to move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Control2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_w6wbg")
+text = "Press R to Reset the Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Control3" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_w6wbg")
+text = "Follow the Instructions in the
+Bottom Right corner to win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_ff56e")
+text = "Back"
+
+[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
