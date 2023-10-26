@@ -67,12 +67,7 @@ var nearbyBoxes = [] # To store nearby boxes
 	
 func checkIfBoxesAreNear():
 	if winOne.nearbyBoxes.has(winTwo) and isAdjacent():
-		if Global.currentLevel == 1:
-			Global.levelOneTime = time
-		elif Global.currentLevel == 2:
-			Global.levelTwoTime = time
-		elif Global.currentLevel == 3:
-			Global.levelThreeTime = time
+		Global.levelTime = time
 		get_tree().change_scene_to_file("res://Scenes/Menus/ContinueMenu.tscn")
 	else:
 		return

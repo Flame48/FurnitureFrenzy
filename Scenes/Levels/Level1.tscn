@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdsarmm4yi3c4" path="res://Assets/topDown_baseTiles.png" id="4_m41ab"]
 [ext_resource type="PackedScene" uid="uid://dboy4s0k6kyns" path="res://Scenes/Props/PushableBox.tscn" id="4_s6ey4"]
 [ext_resource type="PackedScene" uid="uid://ccu6jmlk44dlh" path="res://Scenes/Menus/PauseMenu.tscn" id="6_awbfe"]
-[ext_resource type="Theme" uid="uid://cqi0qinw5f5bv" path="res://Assets/Themes/Time.tres" id="7_00gsi"]
+[ext_resource type="Theme" uid="uid://bhk161pgmwgfl" path="res://Assets/Themes/LevelLabel.tres" id="7_y48qt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aerma"]
 texture = ExtResource("2_dp0ua")
@@ -1928,12 +1928,15 @@ zoom = Vector2(1.96, 1.96)
 visible = false
 
 [node name="Label" type="Label" parent="Camera2D"]
-offset_left = 192.0
+offset_left = 152.0
 offset_top = 144.0
-offset_right = 327.0
-offset_bottom = 185.0
-theme = ExtResource("7_00gsi")
-text = "GET STUFF"
+offset_right = 322.0
+offset_bottom = 186.0
+theme = ExtResource("7_y48qt")
+text = "Get the sleepy man
+to the Coffee"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="ImmovableWall" type="TileMap" parent="."]
 visible = false

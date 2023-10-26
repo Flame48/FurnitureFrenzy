@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3ivtvuqq5ioq"]
+[gd_scene load_steps=14 format=3 uid="uid://c3ivtvuqq5ioq"]
 
 [ext_resource type="Script" path="res://Scripts/Pause.gd" id="1_fi1ag"]
 [ext_resource type="Texture2D" uid="uid://c7jjjtebv7dg2" path="res://Assets/4 BigSet.png" id="2_ocmb8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dboy4s0k6kyns" path="res://Scenes/Props/PushableBox.tscn" id="4_aconh"]
 [ext_resource type="PackedScene" uid="uid://ccu6jmlk44dlh" path="res://Scenes/Menus/PauseMenu.tscn" id="5_kxxe7"]
 [ext_resource type="Script" path="res://Scripts/ImmovableBoxesTileMap.gd" id="6_6a4ae"]
+[ext_resource type="Theme" uid="uid://bhk161pgmwgfl" path="res://Assets/Themes/LevelLabel.tres" id="7_fltvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aerma"]
 texture = ExtResource("2_ocmb8")
@@ -1938,11 +1939,15 @@ zoom = Vector2(1.75, 1.75)
 visible = false
 
 [node name="Label" type="Label" parent="Camera2D"]
-offset_left = -352.0
-offset_top = -200.0
-offset_right = -146.0
-offset_bottom = -174.0
-text = "Get the Librarian their coffee"
+offset_left = 72.0
+offset_top = 160.0
+offset_right = 354.0
+offset_bottom = 202.0
+theme = ExtResource("7_fltvs")
+text = "Get the Librarian
+to their coffee"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="ImmovableWall" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5gl2f")
