@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv0pj5emjsax4"]
 
-[ext_resource type="AudioStream" uid="uid://berc441frxo8l" path="res://Assets/Music/trimmedwinSFX.wav" id="1_0djhs"]
+[ext_resource type="AudioStream" uid="uid://cj345uyk0t7sx" path="res://Assets/Music/winSFX.wav" id="1_stf7s"]
 [ext_resource type="Script" path="res://Scripts/WinSound.gd" id="2_80psv"]
 
 [node name="WinEffect" type="AudioStreamPlayer"]
-stream = ExtResource("1_0djhs")
+stream = ExtResource("1_stf7s")
 volume_db = -15.0
 autoplay = true
 bus = &"SFX"

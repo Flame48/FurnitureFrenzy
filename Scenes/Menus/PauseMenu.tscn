@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_g4ej0"]
 [ext_resource type="Theme" uid="uid://2mc217c3on06" path="res://Assets/Themes/PauseButtons.tres" id="2_y63xp"]
-[ext_resource type="AudioStream" uid="uid://d353y2xky20vo" path="res://Assets/Music/button Click.mp3" id="3_qel6v"]
+[ext_resource type="AudioStream" uid="uid://b1x3qapwiko1c" path="res://Assets/Music/Trimmedbutton Click.mp3" id="3_wbeik"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -58,8 +58,8 @@ theme = ExtResource("2_y63xp")
 text = "Quit"
 
 [node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_qel6v")
-volume_db = 5.0
+stream = ExtResource("3_wbeik")
+volume_db = 10.0
 bus = &"SFX"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
