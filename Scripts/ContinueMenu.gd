@@ -54,3 +54,7 @@ func _on_replay_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
 	Global.playLevelMusic = true
 	Global.playMenuMusic = false
+
+
+func _on_timer_timeout():
+	Global.playWinSound = false
