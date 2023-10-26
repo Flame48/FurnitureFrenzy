@@ -1,4 +1,4 @@
 extends Node
 
-var currentLevel = 1
+var currentLevel = 0
 var levelTime = 0

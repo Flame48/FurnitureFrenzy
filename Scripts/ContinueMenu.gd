@@ -28,7 +28,7 @@ func _ready():
 		timeLabelSpacer.visible = false
 		timeBox.visible = false
 		timeBoxSpacer.visible = false
-	if Global.currentLevel == 2: #Last Level
+	if Global.currentLevel == 5: #Last Level
 		continueButton.visible = false
 		continueSpacer.visible = false
 		thankYou.visible = true
