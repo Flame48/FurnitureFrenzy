@@ -1908,7 +1908,7 @@ region_rect = Rect2(64, 432, 16, 16)
 [node name="WinOne" parent="Furniture" instance=ExtResource("5_14e22")]
 unique_name_in_owner = true
 position = Vector2(-24, 136)
-region_rect = Rect2(32, 400, 16, 16)
+region_rect = Rect2(16, 368, 16, 16)
 
 [node name="WinTwo" parent="Furniture" instance=ExtResource("5_14e22")]
 unique_name_in_owner = true
