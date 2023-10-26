@@ -12,6 +12,7 @@ extends Control
 @onready var timeBoxSpacer = %Spacer
 @onready var thankYou = %ThankYou
 @onready var thankYouSpacer = %Label5
+@onready var buttonClick = $ButtonClick
 
 var msecTime = 0
 var minutesTime = 0
@@ -38,23 +39,27 @@ func _ready():
 	seconds.text = "%02d." % secondsTime
 	msec.text = "%03d" % msecTime
 func _on_continue_pressed():
+	buttonClick.play()
+	await buttonClick.finished
 	Global.currentLevel += 1
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
 	Global.playLevelMusic = true
 	Global.playMenuMusic = false
 func _on_quit_pressed():
+	buttonClick.play()
+	await buttonClick.finished
 	get_tree().quit()
 
 func _on_main_menu_pressed():
+	buttonClick.play()
+	await buttonClick.finished
 	get_tree().change_scene_to_file("res://Scenes/Menus/StartMenu.tscn")
 	Global.playLevelMusic = false
 	Global.playMenuMusic = true
 
 func _on_replay_pressed():
+	buttonClick.play()
+	await buttonClick.finished
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")
 	Global.playLevelMusic = true
 	Global.playMenuMusic = false
-
-
-func _on_timer_timeout():
-	Global.playWinSound = false

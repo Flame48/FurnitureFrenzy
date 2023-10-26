@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdxq26tpltwjn"]
+[gd_scene load_steps=6 format=3 uid="uid://cdxq26tpltwjn"]
 
 [ext_resource type="Script" path="res://Scripts/ControlPage.gd" id="1_hhme6"]
 [ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_082i2"]
 [ext_resource type="Theme" uid="uid://dtfyaf1ivc1ip" path="res://Assets/Themes/ControlPageLabel.tres" id="3_w6wbg"]
+[ext_resource type="AudioStream" uid="uid://d353y2xky20vo" path="res://Assets/Music/button Click.mp3" id="5_8vmg3"]
 [ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="5_ff56e"]
 
 [node name="ControlPage" type="Control"]
@@ -81,5 +82,10 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("5_ff56e")
 text = "Back"
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8vmg3")
+volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

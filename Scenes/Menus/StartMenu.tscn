@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cimc3p2b4k2mh"]
+[gd_scene load_steps=6 format=3 uid="uid://cimc3p2b4k2mh"]
 
 [ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_2fy63"]
 [ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_anm1g"]
 [ext_resource type="Theme" uid="uid://dj3lenipeik2a" path="res://Assets/Themes/TitleLabel.tres" id="3_840rw"]
 [ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="4_wcy5u"]
+[ext_resource type="AudioStream" uid="uid://d353y2xky20vo" path="res://Assets/Music/button Click.mp3" id="5_3tybp"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -78,6 +79,11 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_wcy5u")
 text = "Quit"
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3tybp")
+volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]

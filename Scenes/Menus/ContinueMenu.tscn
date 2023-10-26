@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://fxrtm7l3q775"]
+[gd_scene load_steps=7 format=3 uid="uid://fxrtm7l3q775"]
 
 [ext_resource type="Script" path="res://Scripts/ContinueMenu.gd" id="1_h7q6t"]
 [ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_npd3e"]
 [ext_resource type="Theme" uid="uid://bjvwupkf1kq0e" path="res://Assets/Themes/Label.tres" id="3_2thjs"]
 [ext_resource type="Theme" uid="uid://cqi0qinw5f5bv" path="res://Assets/Themes/Time.tres" id="4_bnhbw"]
 [ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="5_hog8o"]
+[ext_resource type="AudioStream" uid="uid://d353y2xky20vo" path="res://Assets/Music/button Click.mp3" id="6_kb82q"]
 
 [node name="ContinueMenu" type="Control"]
 layout_mode = 3
@@ -135,13 +136,12 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("5_hog8o")
 text = "Quit"
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.34
-one_shot = true
-autostart = true
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_kb82q")
+volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
