@@ -5,7 +5,7 @@
 
 [node name="WinEffect" type="AudioStreamPlayer"]
 stream = ExtResource("1_dhqx8")
-volume_db = -20.0
+volume_db = -15.0
 autoplay = true
 bus = &"SFX"
 script = ExtResource("2_80psv")

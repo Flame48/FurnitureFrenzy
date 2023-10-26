@@ -9,9 +9,9 @@ variation_embolden = 0.25
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jmi8"]
 texture = ExtResource("1_osffp")
-texture_margin_left = 2.0
-texture_margin_top = 3.0
-texture_margin_right = 2.0
+texture_margin_left = 3.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
 texture_margin_bottom = 2.0
 expand_margin_left = 16.0
 expand_margin_top = 8.0

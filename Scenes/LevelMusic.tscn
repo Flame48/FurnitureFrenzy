@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1v3gxmafos3l"]
 
-[ext_resource type="AudioStream" uid="uid://d1v43pga2wv8c" path="res://Assets/Music/LevelMusic.mp3" id="1_wwljf"]
+[ext_resource type="AudioStream" uid="uid://pi20f1mkhpue" path="res://Assets/Music/LevelMusic.mp3" id="1_wwljf"]
 [ext_resource type="Script" path="res://Scripts/LevelMusic.gd" id="2_jccs2"]
 
 [node name="MenuMusicPlayer" type="AudioStreamPlayer"]
