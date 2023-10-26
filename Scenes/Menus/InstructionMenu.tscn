@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cimc3p2b4k2mh"]
+[gd_scene load_steps=5 format=3 uid="uid://dnud0qch0aj7s"]
 
-[ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_2fy63"]
-[ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_anm1g"]
-[ext_resource type="Theme" uid="uid://dj3lenipeik2a" path="res://Assets/Themes/TitleLabel.tres" id="3_840rw"]
-[ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="4_wcy5u"]
+[ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_lyrd6"]
+[ext_resource type="Texture2D" uid="uid://cpdmei5uex8fh" path="res://Assets/GUI/GUI_4x.png" id="2_hxo8g"]
+[ext_resource type="Theme" uid="uid://dj3lenipeik2a" path="res://Assets/Themes/TitleLabel.tres" id="3_37e5u"]
+[ext_resource type="Theme" uid="uid://cx76i7o1aiq7d" path="res://Assets/Themes/Button.tres" id="4_p4246"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2fy63")
+script = ExtResource("1_lyrd6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
@@ -20,7 +20,7 @@ position = Vector2(640, 360)
 [node name="Background" type="Sprite2D" parent="Camera2D"]
 position = Vector2(6.10352e-05, 0)
 scale = Vector2(13.3333, 7.5)
-texture = ExtResource("2_anm1g")
+texture = ExtResource("2_hxo8g")
 region_enabled = true
 region_rect = Rect2(384, 0, 96, 96)
 
@@ -40,7 +40,7 @@ layout_mode = 2
 
 [node name="GameTitle" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme = ExtResource("3_840rw")
+theme = ExtResource("3_37e5u")
 text = "Furniture Frenzy"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -59,26 +59,17 @@ alignment = 1
 [node name="Play" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("4_wcy5u")
+theme = ExtResource("4_p4246")
 text = "Play Game"
 
 [node name="Label" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Instructions" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_wcy5u")
-text = "Controls"
-
-[node name="Label2" type="Label" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="Quit" type="Button" parent="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("4_wcy5u")
+theme = ExtResource("4_p4246")
 text = "Quit"
 
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="Camera2D/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

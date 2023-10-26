@@ -4,8 +4,8 @@ extends Control
 @onready var minutes = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/minutes
 @onready var seconds = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/seconds
 @onready var levelLabel = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/TimeText
-@onready var continueSpacer = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Label2
-@onready var continueButton = $Camera2D/MarginContainer/HBoxContainer/VBoxContainer/Continue
+@onready var continueSpacer = %Label2
+@onready var continueButton = %Continue
 @onready var timeLabel = %TimeText
 @onready var timeLabelSpacer = %Label3
 @onready var timeBox = %HBoxContainer
@@ -34,7 +34,6 @@ func _ready():
 		thankYou.visible = true
 		thankYouSpacer.visible = true
 		
-		
 	minutes.text = "%02d:" % minutesTime
 	seconds.text = "%02d." % secondsTime
 	msec.text = "%03d" % msecTime
@@ -48,9 +47,4 @@ func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menus/StartMenu.tscn")
 
 func _on_replay_pressed():
-	if Global.currentLevel == 1:
-		get_tree().change_scene_to_file("res://Scenes/Levels/LevelOne.tscn")
-	elif Global.currentLevel == 2:
-		get_tree().change_scene_to_file("res://Scenes/Levels/LevelTwo.tscn")
-	elif Global.currentLevel == 3:
-		get_tree().change_scene_to_file("res://Scenes/Levels/LevelThree.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/Level"+str(Global.currentLevel)+".tscn")

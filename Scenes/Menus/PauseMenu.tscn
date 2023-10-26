@@ -38,26 +38,17 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("2_y63xp")
 text = "Resume (ESC)"
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="Reset" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_y63xp")
 text = "Reset (R)"
 
-[node name="Spacer" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="Main Menu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_y63xp")
 text = "Main Menu"
-
-[node name="Spacer2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
 
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
